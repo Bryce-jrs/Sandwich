@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Pr\IeC {\'e}sentation}{3}
+\contentsline {subsection}{\numberline {2.1}Sujet}{3}
+\contentsline {subsection}{\numberline {2.2}Cadre de travail}{3}
+\contentsline {section}{\numberline {3}Corps du projet}{4}
+\contentsline {subsection}{\numberline {3.1}Structure de monde}{4}
+\contentsline {subsection}{\numberline {3.2}Structure de r\IeC {\`e}gles}{5}
+\contentsline {subsection}{\numberline {3.3}Structure de file}{7}
+\contentsline {subsection}{\numberline {3.4}Gestion des conflits}{8}
+\contentsline {subsection}{\numberline {3.5}Options}{9}
+\contentsline {subsection}{\numberline {3.6}Algorithme global de la fonction main}{9}
+\contentsline {subsection}{\numberline {3.7}Tests}{11}
+\contentsline {section}{\numberline {4}Conclusion}{12}

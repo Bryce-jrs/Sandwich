@@ -1,0 +1,45 @@
+/** w = world_init();
+rule_init();
+printf("%d %d\n", WIDTH, HEIGHT);
+For as many steps as necessary
+    q = queue_init();
+    For all available rules r, and all cells (x,y)
+        If rule_match(w, r, (x,y))
+            queue_append(q, r, (x,y))
+    For all elements (r, (x,y)) in the queue q
+        world_apply_rule(w, r, (x,y));
+    world_disp(w); **/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "world.h"
+#include "rule.h"
+#include "functions.h"
+
+
+
+int main()
+{
+  struct world w = world_init();
+  rules_init();
+  printf("%d %d\n", WIDTH, HEIGHT);
+  struct queue queue;
+  for(int i=0; i<10; i++){
+    struct queue *q = queue_init(&queue);
+    for(int ligne = 0; ligne<HEIGHT; ligne ++){
+      for(int colonne = 0; colonne<WIDTH; colonne ++){
+	for(unsigned int regle = 0; regle<rules_count(); regle++){
+	  if (rule_match(&w, rule_get(regle), ligne, colonne)) {
+	    queue_append(q, rule_get(regle), index(ligne, colonne));
+	  }
+	}
+      }
+    }
+    while((q->indice_debut - q->indice_fin) != 0){
+      world_apply_rule(w, q->file[q->indice_debut], q->cases[q->indice_debut]);
+      queue_pop(q);
+    }
+    world_disp(w);
+  }
+}
